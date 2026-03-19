@@ -29,21 +29,22 @@
     "build": "peggy -c peggy.config.js && tsc",
     "docs": "typedoc",
     "lint": "eslint .",
-    "test": "c8 node --test test/*.test.js"
+    "test": "c8 node --test test/*.test.js",
+    "ci": "npm run build && npm run lint && npm run docs && npm run test"
   },
   "dependencies": {
-    "peggy": "5.1.0",
-    "source-map": "0.7.6"
+    "peggy": "~5.1.0",
+    "source-map": "~0.7.6"
   },
   "devDependencies": {
-    "@peggyjs/eslint-config": "6.0.10",
-    "@types/node": "25.3.3",
-    "c8": "11.0.0",
-    "eslint": "10.0.2",
-    "typedoc": "0.28.17",
-    "typescript": "5.9.3"
+    "@peggyjs/eslint-config": "^6.0.13",
+    "@types/node": "^25.5.0",
+    "eslint": "^10.0.3",
+    "superc8": "~12.3.1",
+    "typedoc": "^0.28.17",
+    "typescript": "^5.9.3"
   },
-  "packageManager": "pnpm@10.30.3",
+  "packageManager": "pnpm@10.32.1",
   "pnpm": {
     "overrides": {
       "typedoc@0.28.17>markdown-it": "14.1.1",
