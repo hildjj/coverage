@@ -8,6 +8,6 @@ jobs:
   build:
     uses: cto-af/workflows/.github/workflows/node-ci.yml@main
     with:
-      sript: ci
+      script: ci
     secrets:
       CODECOV_TOKEN: secrets.CODECOV_TOKEN
